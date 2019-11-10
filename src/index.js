@@ -8,7 +8,9 @@ app.use(express.json());
 
 app.set('port', process.env.PORT || 3000);
 //rutas
-app.use('/api-udo-ud', require('./routes/api'));
+app.use('/getHorariosApi', require('./routes/api'));
+app.use('/', require('./routes/hola'));
+
 
 
 app.listen(app.get('port'), ()=>{
